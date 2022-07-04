@@ -17,12 +17,6 @@ public class MenuUIHandler : MonoBehaviour
         MainManager.instance.SaveUserData();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     public void StartNew()
     {
         SceneManager.LoadScene(1);

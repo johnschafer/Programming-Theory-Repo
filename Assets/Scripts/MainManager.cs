@@ -33,6 +33,10 @@ public class MainManager : MonoBehaviour
         public string PlayerName;
     }
 
+    // Abstraction
+    /// <summary>
+    /// Saves the user's data to a file in json format.
+    /// </summary>
     public void SaveUserData()
     {
         SaveData data = new SaveData();
@@ -43,6 +47,9 @@ public class MainManager : MonoBehaviour
         File.WriteAllText(path, json);
     }
 
+    /// <summary>
+    /// Loads the user's data from a file in json format.
+    /// </summary>
     public void LoadUserData()
     {
         if (File.Exists(path))
