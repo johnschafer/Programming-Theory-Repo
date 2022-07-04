@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class OrangeTurret : Turret
 {
-
     [SerializeField] GameObject laser;
 
     // Start is called before the first frame update
@@ -16,11 +15,13 @@ public class OrangeTurret : Turret
 
     protected override IEnumerator Shooting()
     {
-        throw new System.NotImplementedException();
+        laser.SetActive(true);
+        yield return new WaitForSeconds(ShootingTime);
+        laser.SetActive(false);
     }
 
     protected override IEnumerator Reloading()
     {
-        throw new System.NotImplementedException();
+        yield return new WaitForSeconds(ReloadingTime);
     }
 }
